@@ -115,3 +115,9 @@ fi
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 POWERLEVEL9K_INSTANT_PROMPT='quiet'
+
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH="$HOME/.local/bin:$PATH"
+
+# Local secrets (untracked) — e.g. CONTEXT7_API_KEY. See ~/ai-config.
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
